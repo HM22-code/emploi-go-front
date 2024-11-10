@@ -30,7 +30,7 @@ const Tab1: React.FC = () => {
           minPitch={50}
           maxPitch={50}
           maplibreLogo={false}
-          mapStyle={'https://api.maptiler.com/maps/a0db1c96-3ec8-4109-b151-8bf92b1fb916/style.json?key='+import.meta.env.VITE_MAPTILER_KEY}
+          mapStyle={import.meta.env.VITE_MAPSTYLE_URL}
         >
           <Marker longitude={5.04650} latitude={47.31781}>
             <img src={officeBuilding} alt="Office building icon" height={50} width={50}/>
