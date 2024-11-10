@@ -1,5 +1,5 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonAvatar, IonCard, IonCardContent } from '@ionic/react';
+import accountCircle from '../assets/account-circle.svg'
 import './Tab4.css';
 
 const Tab4: React.FC = () => {
@@ -11,7 +11,13 @@ const Tab4: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
-                <ExploreContainer name="Tab 4 page" />
+                <IonCard>
+                    <IonCardContent>
+                        <IonAvatar>
+                            <img src={accountCircle} alt="Silhouette of avatar"/>
+                        </IonAvatar>
+                    </IonCardContent>
+                </IonCard>
             </IonContent>
         </IonPage>
     );
