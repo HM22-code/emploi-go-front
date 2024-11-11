@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonAvatar, IonCard, IonCardContent } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonAvatar, IonCard, IonCardContent, IonButton } from '@ionic/react';
 import accountCircle from '../assets/account-circle.svg'
 import './Tab4.css';
 

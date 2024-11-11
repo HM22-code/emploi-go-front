@@ -11,7 +11,7 @@ const Tab5: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
-                <ExploreContainer name="Tab 5 page" />
+                <ExploreContainer name="Components" />
             </IonContent>
         </IonPage>
     );

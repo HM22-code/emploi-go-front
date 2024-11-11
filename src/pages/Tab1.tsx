@@ -1,19 +1,12 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonFab, IonFabButton, IonFabList, IonIcon, IonPage } from '@ionic/react';
 import officeBuilding from '../assets/office-building.svg'
 import './Tab1.css';
 import Map, {Marker} from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import React from 'react';
+import { checkmark, chevronUp, colorPalette, globe } from 'ionicons/icons';
 
 const Tab1: React.FC = () => {
-
-  const [viewState, setViewState] = React.useState({
-    longitude: 5.04631,
-    latitude: 47.31777,
-    zoom: 18,
-    pitch: 50
-  });
-
   return (
     <IonPage>
       <IonContent fullscreen>
@@ -35,6 +28,24 @@ const Tab1: React.FC = () => {
             <img src={officeBuilding} alt="Office building icon" height={50} width={50}/>
           </Marker>
         </Map>
+
+        <IonFab slot="fixed" vertical="bottom" horizontal="start">
+          <IonFabButton>
+            <IonIcon icon={chevronUp}></IonIcon>
+          </IonFabButton>
+          <IonFabList side="top">
+            <IonFabButton>
+              <IonIcon icon={checkmark}></IonIcon>
+            </IonFabButton>
+            <IonFabButton>
+              <IonIcon icon={colorPalette}></IonIcon>
+            </IonFabButton>
+            <IonFabButton>
+              <IonIcon icon={globe}></IonIcon>
+            </IonFabButton>
+          </IonFabList>
+        </IonFab>
+
       </IonContent>
     </IonPage>
   );
