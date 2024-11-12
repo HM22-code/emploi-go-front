@@ -1,16 +1,12 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonBadge, IonItem, IonLabel, IonList, IonRefresher, IonRefresherContent, RefresherEventDetail, IonProgressBar, IonThumbnail, IonCard, IonCardContent, IonButton, IonIcon } from '@ionic/react';
+import { IonContent, IonPage, IonBadge, IonItem, IonLabel, IonProgressBar, IonThumbnail, IonCard, IonCardContent, IonButton, IonIcon } from '@ionic/react';
 import { checkmarkOutline } from 'ionicons/icons';
 import trophy from '../assets/trophy.svg'
 import './Tab3.css';
 
+/* Quest Screen */
 const Tab3: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Quêtes</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent fullscreen>
 
         <IonItem>

@@ -15,9 +15,7 @@ import {
   albumsOutline,
   compassOutline,
   menuOutline,
-  newspaperOutline,
-  giftOutline,
-  calendarOutline
+  newspaperOutline
 } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';

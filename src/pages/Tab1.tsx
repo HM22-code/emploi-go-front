@@ -4,12 +4,14 @@ import './Tab1.css';
 import Map, {Marker} from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import React from 'react';
-import { checkmark, chevronUp, colorPalette, globe } from 'ionicons/icons';
+import { chevronUp, giftOutline, calendarOutline } from 'ionicons/icons';
 
+/* Map Screen */
 const Tab1: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
+
         <Map
           initialViewState={{
             longitude: 5.04650,
@@ -24,9 +26,11 @@ const Tab1: React.FC = () => {
           maplibreLogo={false}
           mapStyle={import.meta.env.VITE_MAPSTYLE_URL}
         >
+
           <Marker longitude={5.04650} latitude={47.31781}>
             <img src={officeBuilding} alt="Office building icon" height={50} width={50}/>
           </Marker>
+
         </Map>
 
         <IonFab slot="fixed" vertical="bottom" horizontal="start">
@@ -35,13 +39,10 @@ const Tab1: React.FC = () => {
           </IonFabButton>
           <IonFabList side="top">
             <IonFabButton>
-              <IonIcon icon={checkmark}></IonIcon>
+              <IonIcon icon={calendarOutline}></IonIcon>
             </IonFabButton>
             <IonFabButton>
-              <IonIcon icon={colorPalette}></IonIcon>
-            </IonFabButton>
-            <IonFabButton>
-              <IonIcon icon={globe}></IonIcon>
+              <IonIcon icon={giftOutline}></IonIcon>
             </IonFabButton>
           </IonFabList>
         </IonFab>
