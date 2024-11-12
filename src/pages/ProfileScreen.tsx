@@ -1,4 +1,4 @@
-import { IonContent, IonPage, IonAvatar, IonCard, IonCardContent } from '@ionic/react';
+import { IonContent, IonPage, IonAvatar, IonCard, IonCardContent, IonItem, IonLabel } from '@ionic/react';
 import accountCircle from '../assets/account-circle.svg'
 import './ProfileScreen.css';
 
@@ -10,9 +10,14 @@ const ProfileScreen: React.FC = () => {
 
         <IonCard>
           <IonCardContent>
-            <IonAvatar>
-              <img src={accountCircle} alt="Silhouette of avatar"/>
-            </IonAvatar>
+            <IonItem>
+              <IonAvatar aria-hidden="true" slot="start">
+                <img src={accountCircle} alt="Silhouette of avatar"/>
+              </IonAvatar>
+              <IonLabel>
+                Pseudo
+              </IonLabel>
+            </IonItem>
           </IonCardContent>
         </IonCard>
 
