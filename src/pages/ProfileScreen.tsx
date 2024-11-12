@@ -1,9 +1,9 @@
 import { IonContent, IonPage, IonAvatar, IonCard, IonCardContent } from '@ionic/react';
 import accountCircle from '../assets/account-circle.svg'
-import './Tab4.css';
+import './ProfileScreen.css';
 
 /* Profile Screen */
-const Tab4: React.FC = () => {
+const ProfileScreen: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
@@ -21,4 +21,4 @@ const Tab4: React.FC = () => {
   );
 };
 
-export default Tab4;
+export default ProfileScreen;

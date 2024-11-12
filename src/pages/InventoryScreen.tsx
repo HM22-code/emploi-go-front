@@ -1,10 +1,10 @@
 import { IonContent, IonPage, IonLabel, IonSegment, IonSegmentButton, IonSegmentContent, IonSegmentView, IonCol, IonGrid, IonRow, IonCardContent, IonCard } from '@ionic/react';
 import tshirtCrew from '../assets/tshirt-crew.svg'
 import wrench from '../assets/wrench.svg'
-import './Tab2.css';
+import './InventoryScreen.css';
 
 /* Inventory Screen */
-const Tab2: React.FC = () => {
+const InventoryScreen: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
@@ -133,4 +133,4 @@ const Tab2: React.FC = () => {
   );
 };
 
-export default Tab2;
+export default InventoryScreen;

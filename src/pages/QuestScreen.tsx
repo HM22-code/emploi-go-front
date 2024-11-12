@@ -1,10 +1,10 @@
 import { IonContent, IonPage, IonBadge, IonItem, IonLabel, IonProgressBar, IonThumbnail, IonCard, IonCardContent, IonButton, IonIcon } from '@ionic/react';
 import { checkmarkOutline } from 'ionicons/icons';
 import trophy from '../assets/trophy.svg'
-import './Tab3.css';
+import './QuestScreen.css';
 
 /* Quest Screen */
-const Tab3: React.FC = () => {
+const QuestScreen: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
@@ -55,4 +55,4 @@ const Tab3: React.FC = () => {
   );
 };
 
-export default Tab3;
+export default QuestScreen;

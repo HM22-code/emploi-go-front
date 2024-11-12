@@ -1,13 +1,13 @@
 import { IonContent, IonFab, IonFabButton, IonFabList, IonIcon, IonPage } from '@ionic/react';
 import officeBuilding from '../assets/office-building.svg'
-import './Tab1.css';
+import './MapScreen.css';
 import Map, {Marker} from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import React from 'react';
 import { chevronUp, giftOutline, calendarOutline } from 'ionicons/icons';
 
 /* Map Screen */
-const Tab1: React.FC = () => {
+const MapScreen: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
@@ -52,4 +52,4 @@ const Tab1: React.FC = () => {
   );
 };
 
-export default Tab1;
+export default MapScreen;

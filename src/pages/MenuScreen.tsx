@@ -1,9 +1,9 @@
 import { IonContent, IonPage } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
-import './Tab5.css';
+import './MenuScreen.css';
 
 /* Menu Screen */
-const Tab5: React.FC = () => {
+const MenuScreen: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
@@ -15,4 +15,4 @@ const Tab5: React.FC = () => {
   );
 };
 
-export default Tab5;
+export default MenuScreen;

@@ -17,11 +17,12 @@ import {
   menuOutline,
   newspaperOutline
 } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
-import Tab4 from './pages/Tab4';
-import Tab5 from './pages/Tab5';
+
+import MapScreen from './pages/MapScreen';
+import InventoryScreen from './pages/InventoryScreen';
+import QuestScreen from './pages/QuestScreen';
+import ProfileScreen from './pages/ProfileScreen';
+import MenuScreen from './pages/MenuScreen';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -61,19 +62,19 @@ const App: React.FC = () => (
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/tab1">
-            <Tab1 />
+            <MapScreen />
           </Route>
           <Route exact path="/tab2">
-            <Tab2 />
+            <InventoryScreen />
           </Route>
           <Route path="/tab3">
-            <Tab3 />
+            <QuestScreen />
           </Route>
           <Route path="/tab4">
-            <Tab4 />
+            <ProfileScreen />
           </Route>
           <Route path="/tab5">
-            <Tab5 />
+            <MenuScreen />
           </Route>
           <Route exact path="/">
             <Redirect to="/tab1" />
