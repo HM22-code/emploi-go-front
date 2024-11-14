@@ -2,6 +2,7 @@ import { IonContent, IonPage, IonBadge, IonItem, IonLabel, IonProgressBar, IonTh
 import { checkmarkOutline } from 'ionicons/icons';
 import trophy from '../assets/trophy.svg'
 import './QuestScreen.css';
+import QuestCard from '../components/QuestCard';
 
 /* Quest Screen */
 const QuestScreen: React.FC = () => {
@@ -14,41 +15,19 @@ const QuestScreen: React.FC = () => {
           <IonLabel>Quotidiennes</IonLabel>
         </IonItem>
 
-        <IonCard>
-          <IonCardContent>
-            <IonItem>
-              <IonThumbnail slot="start">
-                <img src={trophy} alt="Silhouette of trophy" height={50} width={50}/>
-              </IonThumbnail>
-              <IonLabel>Sint ad incididunt eu tempor cillum officia ipsum tempor consequat irure esse non eiusmod.</IonLabel>
-            </IonItem>
-            <IonItem>
-              <IonButton disabled={true} slot="end" size="small">
-                <IonIcon slot="icon-only" icon={checkmarkOutline}></IonIcon>
-              </IonButton>
-              <IonProgressBar value={0}></IonProgressBar>
-              <IonLabel>[0/2]</IonLabel>
-            </IonItem>
-          </IonCardContent>
-        </IonCard>
+        <QuestCard
+          label={'Sint ad incididunt eu tempor cillum officia ipsum tempor consequat irure esse non eiusmod.'}
+          progressValue={0}
+          progressGoal={2}
+          disabled={true}
+        />
 
-        <IonCard>
-          <IonCardContent>
-            <IonItem>
-              <IonThumbnail slot="start">
-                <img src={trophy} alt="Silhouette of trophy" height={50} width={50}/>
-              </IonThumbnail>
-              <IonLabel>Sint ad incididunt eu tempor cillum officia ipsum tempor consequat irure esse non eiusmod.</IonLabel>
-            </IonItem>
-            <IonItem>
-              <IonButton disabled={true} slot="end" size="small">
-                <IonIcon slot="icon-only" icon={checkmarkOutline}></IonIcon>
-              </IonButton>
-              <IonProgressBar value={0}></IonProgressBar>
-              <IonLabel>[0/2]</IonLabel>
-            </IonItem>
-          </IonCardContent>
-        </IonCard>
+        <QuestCard
+          label={'Sint ad incididunt eu tempor cillum officia ipsum tempor consequat irure esse non eiusmod.'}
+          progressValue={0}
+          progressGoal={2}
+          disabled={true}
+        />
 
       </IonContent>
     </IonPage>
