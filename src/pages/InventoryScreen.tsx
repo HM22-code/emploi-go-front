@@ -1,7 +1,6 @@
-import { IonContent, IonPage, IonLabel, IonSegment, IonSegmentButton, IonSegmentContent, IonSegmentView, IonCol, IonGrid, IonRow, IonCardContent, IonCard } from '@ionic/react';
-import tshirtCrew from '../assets/tshirt-crew.svg'
-import wrench from '../assets/wrench.svg'
+import { IonContent, IonPage, IonLabel, IonSegment, IonSegmentButton, IonSegmentContent, IonSegmentView} from '@ionic/react';
 import './InventoryScreen.css';
+import ItemGrid from '../components/ItemGrid';
 
 /* Inventory Screen */
 const InventoryScreen: React.FC = () => {
@@ -17,115 +16,13 @@ const InventoryScreen: React.FC = () => {
             <IonLabel>Accessoires</IonLabel>
           </IonSegmentButton>
         </IonSegment>
-
         <IonSegmentView>
-
           <IonSegmentContent id="first">
-
-            <IonGrid fixed={true}>
-              <IonRow>
-                <IonCol>
-                  <IonCard>
-                    <IonCardContent>
-                      <img src={tshirtCrew} alt="Silhouette of a tshirt" height={50} width={50}/>
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-                <IonCol>
-                  <IonCard>
-                    <IonCardContent>
-                      <img src={tshirtCrew} alt="Silhouette of a tshirt" height={50} width={50}/>
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-                <IonCol>
-                  <IonCard>
-                    <IonCardContent>
-                      <img src={tshirtCrew} alt="Silhouette of a tshirt" height={50} width={50}/>
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-              </IonRow>
-              <IonRow>
-                <IonCol>
-                  <IonCard>
-                    <IonCardContent>
-                      <img src={tshirtCrew} alt="Silhouette of a tshirt" height={50} width={50}/>
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-                <IonCol>
-                  <IonCard>
-                    <IonCardContent>
-                      <img src={tshirtCrew} alt="Silhouette of a tshirt" height={50} width={50}/>
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-                <IonCol>
-                  <IonCard>
-                    <IonCardContent>
-                      <img src={tshirtCrew} alt="Silhouette of a tshirt" height={50} width={50}/>
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-              </IonRow>
-            </IonGrid>
-
+            <ItemGrid data={[1, 2, 3, 4, 5, 6, 7, 8]} />
           </IonSegmentContent>
-
           <IonSegmentContent id="second">
-
-            <IonGrid fixed={true}>
-              <IonRow>
-                <IonCol>
-                  <IonCard>
-                    <IonCardContent>
-                      <img src={wrench} alt="Silhouette of a wrench" height={50} width={50}/>
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-                <IonCol>
-                  <IonCard>
-                    <IonCardContent>
-                      <img src={wrench} alt="Silhouette of a wrench" height={50} width={50}/>
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-                <IonCol>
-                  <IonCard>
-                    <IonCardContent>
-                      <img src={wrench} alt="Silhouette of a wrench" height={50} width={50}/>
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-              </IonRow>
-              <IonRow>
-                <IonCol>
-                  <IonCard>
-                    <IonCardContent>
-                      <img src={wrench} alt="Silhouette of a wrench" height={50} width={50}/>
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-                <IonCol>
-                  <IonCard>
-                    <IonCardContent>
-                      <img src={wrench} alt="Silhouette of a wrench" height={50} width={50}/>
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-                <IonCol>
-                  <IonCard>
-                    <IonCardContent>
-                      <img src={wrench} alt="Silhouette of a wrench" height={50} width={50}/>
-                    </IonCardContent>
-                  </IonCard>
-                </IonCol>
-              </IonRow>
-            </IonGrid>
-
+            <ItemGrid data={[1, 2, 3, 4, 5, 6, 7, 8, 9]} />
           </IonSegmentContent>
-
         </IonSegmentView>
 
       </IonContent>
