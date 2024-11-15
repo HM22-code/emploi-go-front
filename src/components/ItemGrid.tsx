@@ -31,7 +31,7 @@ const ItemGrid: React.FC<Props> = ({ data }) => {
         chunks.map((chunk, chunkIndex) =>
         <IonRow key={chunkIndex}>
           {chunk.map((item) =>
-          <IonCol size="4" size-md="4" size-lg="4">
+          <IonCol key={item} size="4" size-md="4" size-lg="4">
             <ItemCard key={item}/>
           </IonCol>
           )}
