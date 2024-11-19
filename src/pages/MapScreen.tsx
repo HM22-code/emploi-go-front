@@ -1,5 +1,4 @@
 import { IonContent, IonFab, IonFabButton, IonFabList, IonIcon, IonPage } from '@ionic/react';
-import officeBuilding from '../assets/office-building.svg'
 import './MapScreen.css';
 import Map, {Marker} from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -27,9 +26,7 @@ const MapScreen: React.FC = () => {
           mapStyle={import.meta.env.VITE_MAPSTYLE_URL}
         >
 
-          <Marker longitude={5.04650} latitude={47.31781}>
-            <img src={officeBuilding} alt="Office building icon" height={50} width={50}/>
-          </Marker>
+          <Marker longitude={5.04650} latitude={47.31781} />
 
         </Map>
 
