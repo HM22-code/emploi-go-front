@@ -2,11 +2,16 @@ import { IonCard, IonCardContent } from '@ionic/react';
 import tshirtCrew from '../assets/tshirt-crew.svg'
 import './ItemCard.css';
 
-const ItemCard: React.FC = () => {
+type Props = {
+  thumbnailUrl: string,
+  title: string;
+};
+
+const ItemCard: React.FC<Props> = (thumbnailUrl, title) => {
   return (
     <IonCard>
       <IonCardContent >
-        <img src={tshirtCrew} alt="Silhouette of a tshirt"/>
+        <img src={tshirtCrew} alt={title}/>
       </IonCardContent>
     </IonCard>
   );

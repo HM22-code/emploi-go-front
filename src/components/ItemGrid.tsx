@@ -1,29 +1,42 @@
 import { IonCol, IonGrid, IonRow } from '@ionic/react';
 import './ItemGrid.css';
 import ItemCard from './ItemCard';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-/*
-TODO: Define item props
-type DataItem = {
-  id: number;
-};
-*/
+type Item = {
+  userId: number,
+  id: number,
+  title: string,
+  url: string
+  thumbnailUrl: string
+}
 
-type Props = {
-  data: number[];
-};
-
-const chunkArray = <T,>(array: T[], chunkSize: number): T[][] => {
-  const chunks: T[][] = [];
+const chunkArray = <Item,>(array: Item[], chunkSize: number): Item[][] => {
+  const chunks: Item[][] = [];
   for (let i = 0; i < array.length; i += chunkSize) {
     chunks.push(array.slice(i, i + chunkSize));
   }
   return chunks;
 };
 
-const ItemGrid: React.FC<Props> = ({ data }) => {
+const ItemGrid: React.FC = () => {
 
-  const chunks = chunkArray(data, 3);
+  const [items, setItems] = useState<Item[]>([]);
+
+  useEffect(() => {
+    axios.get('https://hm22-code.github.io/emploi-go-back/items.json')
+      .then(response => {
+        setItems(response.data);
+        console.log(response.data)
+      })
+    .catch(error => {
+      console.log(error);
+    });
+  }, []);
+
+  const chunks = chunkArray(items, 3);
+  console.log(chunks)
 
   return (
     <IonGrid fixed={true}>
@@ -31,8 +44,8 @@ const ItemGrid: React.FC<Props> = ({ data }) => {
         chunks.map((chunk, chunkIndex) =>
         <IonRow key={chunkIndex}>
           {chunk.map((item) =>
-          <IonCol key={item} size="4" size-md="4" size-lg="4">
-            <ItemCard key={item}/>
+          <IonCol key={item.id} size="4" size-md="4" size-lg="4">
+            <ItemCard key={item.id} thumbnailUrl={item.thumbnailUrl} title={item.title}/>
           </IonCol>
           )}
         </IonRow>

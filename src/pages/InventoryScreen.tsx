@@ -18,10 +18,10 @@ const InventoryScreen: React.FC = () => {
         </IonSegment>
         <IonSegmentView>
           <IonSegmentContent id="first">
-            <ItemGrid data={[1, 2, 3, 4, 5, 6, 7, 8]} />
+            <ItemGrid />
           </IonSegmentContent>
           <IonSegmentContent id="second">
-            <ItemGrid data={[1, 2, 3, 4, 5, 6, 7, 8, 9]} />
+
           </IonSegmentContent>
         </IonSegmentView>
 
