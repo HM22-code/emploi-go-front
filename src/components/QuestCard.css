@@ -1,0 +1,5 @@
+.truncate-label {
+    height: 75px;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}

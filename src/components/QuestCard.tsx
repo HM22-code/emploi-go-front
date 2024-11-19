@@ -18,10 +18,10 @@ const QuestCard: React.FC<Props> = ({ label, progressValue, progressGoal, disabl
           <IonThumbnail slot="start">
             <img src={trophy} alt="Silhouette of trophy" height={50} width={50}/>
           </IonThumbnail>
-          <IonLabel>{label}</IonLabel>
+          <IonLabel className='truncate-label'>{label}</IonLabel>
         </IonItem>
         <IonItem>
-          <IonButton disabled={disabled} slot="end" size="small">
+          <IonButton disabled={!disabled} slot="end" size="small">
             <IonIcon slot="icon-only" icon={checkmarkOutline}></IonIcon>
           </IonButton>
           <IonProgressBar value={progressValue / progressGoal}></IonProgressBar>
