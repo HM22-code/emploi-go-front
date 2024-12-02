@@ -1,0 +1,29 @@
+.logo-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 128px;
+}
+
+.button-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.item {
+    padding: 10px;
+}
+
+.title {
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+}
