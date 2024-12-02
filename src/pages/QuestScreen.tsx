@@ -19,6 +19,7 @@ const QuestScreen: React.FC = () => {
   const [quests, setQuests] = useState<Quest[]>([]);
 
   useEffect(() => {
+    axios.defaults.withCredentials = true;
     axios.get('https://hm22-code.github.io/emploi-go-back/quests.json')
       .then(response => {
         setQuests(response.data);

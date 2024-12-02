@@ -25,6 +25,7 @@ const ItemGrid: React.FC = () => {
   const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
+    axios.defaults.withCredentials = true;
     axios.get('https://hm22-code.github.io/emploi-go-back/items.json')
       .then(response => {
         setItems(response.data);

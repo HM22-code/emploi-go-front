@@ -27,6 +27,7 @@ const ProfileScreen: React.FC = () => {
   );
 
   useEffect(() => {
+    axios.defaults.withCredentials = true;
     axios.get('https://hm22-code.github.io/emploi-go-back/user.json')
       .then(response => {
         setUser(response.data);
