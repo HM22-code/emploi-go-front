@@ -23,6 +23,9 @@ import InventoryScreen from './pages/InventoryScreen';
 import QuestScreen from './pages/QuestScreen';
 import ProfileScreen from './pages/ProfileScreen';
 import MenuScreen from './pages/MenuScreen';
+import LoginScreen from './pages/LoginScreen';
+import WelcomeScreen from './pages/WelcomeScreen';
+import SignupScreen from './pages/SignupScreen';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -76,8 +79,17 @@ const App: React.FC = () => (
           <Route path="/tab5">
             <MenuScreen />
           </Route>
+          <Route path="/login">
+            <LoginScreen />
+          </Route>
+          <Route path="/signup">
+            <SignupScreen />
+          </Route>
+          <Route path="/welcome">
+            <WelcomeScreen />
+          </Route>
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/welcome" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
