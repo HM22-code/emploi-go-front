@@ -1,28 +1,16 @@
 import { Redirect, Route } from 'react-router-dom';
-import {
-  IonApp,
-  IonIcon,
-  IonLabel,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs,
-  setupIonicReact
-} from '@ionic/react';
+import { IonApp, IonIcon, IonLabel, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import {
-  personCircleOutline,
-  albumsOutline,
-  compassOutline,
-  menuOutline,
-  newspaperOutline
-} from 'ionicons/icons';
+import { personCircleOutline, albumsOutline, compassOutline, menuOutline, newspaperOutline } from 'ionicons/icons';
 
-import MapScreen from './pages/MapScreen';
-import InventoryScreen from './pages/InventoryScreen';
-import QuestScreen from './pages/QuestScreen';
-import ProfileScreen from './pages/ProfileScreen';
-import MenuScreen from './pages/MenuScreen';
+import MapPage from './pages/MapPage';
+import InventoryPage from './pages/InventoryPage';
+import QuestPage from './pages/QuestPage';
+import ProfilePage from './pages/ProfilePage';
+import MenuPage from './pages/MenuPage';
+import LoginPage from './pages/LoginPage';
+import WelcomePage from './pages/WelcomePage';
+import SignupPage from './pages/SignupPage';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -61,23 +49,32 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/tab1">
-            <MapScreen />
+          <Route path="/tab1">
+            <MapPage />
           </Route>
-          <Route exact path="/tab2">
-            <InventoryScreen />
+          <Route path="/tab2">
+            <InventoryPage />
           </Route>
           <Route path="/tab3">
-            <QuestScreen />
+            <QuestPage />
           </Route>
           <Route path="/tab4">
-            <ProfileScreen />
+            <ProfilePage />
           </Route>
           <Route path="/tab5">
-            <MenuScreen />
+            <MenuPage />
+          </Route>
+          <Route path="/login">
+            <LoginPage />
+          </Route>
+          <Route path="/signup">
+            <SignupPage />
+          </Route>
+          <Route path="/welcome">
+            <WelcomePage />
           </Route>
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/welcome" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">

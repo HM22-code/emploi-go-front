@@ -1,0 +1,7 @@
+p.truncate {
+    width: 75px;
+    text-overflow: ellipsis;
+    word-wrap: nowrap;
+    white-space:nowrap;
+    overflow:hidden;
+}
