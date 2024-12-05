@@ -1,13 +1,11 @@
 import { IonContent, IonPage, IonLabel, IonSegment, IonSegmentButton, IonSegmentContent, IonSegmentView} from '@ionic/react';
-import './InventoryScreen.css';
+import './InventoryPage.css';
 import ItemGrid from '../components/ItemGrid';
 
-/* Inventory Screen */
-const InventoryScreen: React.FC = () => {
+const InventoryPage: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-
         <IonSegment value="first">
           <IonSegmentButton value="first" contentId="first">
             <IonLabel>Tenues</IonLabel>
@@ -18,16 +16,17 @@ const InventoryScreen: React.FC = () => {
         </IonSegment>
         <IonSegmentView>
           <IonSegmentContent id="first">
-            <ItemGrid />
+            <div>
+              <ItemGrid />
+            </div>
           </IonSegmentContent>
           <IonSegmentContent id="second">
-
+            <div></div>
           </IonSegmentContent>
         </IonSegmentView>
-
       </IonContent>
     </IonPage>
   );
 };
 
-export default InventoryScreen;
+export default InventoryPage;

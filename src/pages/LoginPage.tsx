@@ -2,10 +2,10 @@ import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, Ion
 import { logoIonic } from 'ionicons/icons';
 import React, { useState } from "react";
 import axios from "axios";
-import './LoginScreen.css';
+import './LoginPage.css';
 import { Link } from 'react-router-dom';
 
-const LoginScreen: React.FC = () => {
+const LoginPage: React.FC = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -77,4 +77,4 @@ const LoginScreen: React.FC = () => {
   );
 };
 
-export default LoginScreen;
+export default LoginPage;

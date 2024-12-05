@@ -1,16 +1,14 @@
 import { IonContent, IonFab, IonFabButton, IonFabList, IonIcon, IonPage } from '@ionic/react';
-import './MapScreen.css';
+import './MapPage.css';
 import Map, {Marker} from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import React from 'react';
 import { chevronUp, giftOutline, calendarOutline } from 'ionicons/icons';
 
-/* Map Screen */
-const MapScreen: React.FC = () => {
+const MapPage: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-
         <Map
           initialViewState={{
             longitude: 5.04650,
@@ -25,11 +23,8 @@ const MapScreen: React.FC = () => {
           maplibreLogo={false}
           mapStyle={import.meta.env.VITE_MAPSTYLE_URL}
         >
-
           <Marker longitude={5.04650} latitude={47.31781} />
-
         </Map>
-
         <IonFab slot="fixed" vertical="bottom" horizontal="start">
           <IonFabButton>
             <IonIcon icon={chevronUp}></IonIcon>
@@ -43,10 +38,9 @@ const MapScreen: React.FC = () => {
             </IonFabButton>
           </IonFabList>
         </IonFab>
-
       </IonContent>
     </IonPage>
   );
 };
 
-export default MapScreen;
+export default MapPage;

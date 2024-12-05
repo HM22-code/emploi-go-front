@@ -1,5 +1,5 @@
 import { IonContent, IonPage, IonBadge, IonItem, IonLabel } from '@ionic/react';
-import './QuestScreen.css';
+import './QuestPage.css';
 import QuestCard from '../components/QuestCard';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -13,14 +13,13 @@ type Quest = {
   completed: boolean
 }
 
-/* Quest Screen */
-const QuestScreen: React.FC = () => {
+const QuestPage: React.FC = () => {
 
   const [quests, setQuests] = useState<Quest[]>([]);
 
   useEffect(() => {
     axios.defaults.withCredentials = true;
-    axios.get('https://hm22-code.github.io/emploi-go-back/quests.json')
+    axios.get('http://localhost:3000/quest/')
       .then(response => {
         setQuests(response.data);
       })
@@ -32,12 +31,10 @@ const QuestScreen: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-
         <IonItem>
           <IonBadge slot="end">{quests.length}</IonBadge>
-          <IonLabel>Quotidiennes</IonLabel>
+          <IonLabel>Quêtes</IonLabel>
         </IonItem>
-
         {
           quests.map((item, key) =>
             <QuestCard
@@ -49,17 +46,9 @@ const QuestScreen: React.FC = () => {
             />
           )
         }
-
-        <QuestCard
-          label={'Sint ad incididunt eu tempor cillum officia ipsum tempor consequat irure esse non eiusmod.'}
-          progressValue={0}
-          progressGoal={2}
-          disabled={true}
-        />
-
       </IonContent>
     </IonPage>
   );
 };
 
-export default QuestScreen;
+export default QuestPage;

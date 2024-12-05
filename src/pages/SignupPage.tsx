@@ -2,10 +2,10 @@ import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, Ion
 import { logoIonic } from 'ionicons/icons';
 import React, { useState } from "react";
 import axios from "axios";
-import './SignupScreen.css';
+import './SignupPage.css';
 import { Link } from 'react-router-dom';
 
-const SignupScreen: React.FC = () => {
+const SignupPage: React.FC = () => {
 
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -96,4 +96,4 @@ const SignupScreen: React.FC = () => {
   );
 };
 
-export default SignupScreen;
+export default SignupPage;

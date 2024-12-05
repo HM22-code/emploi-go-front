@@ -1,9 +1,9 @@
 import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonIcon, IonInput, IonItem, IonList, IonPage, IonRow } from '@ionic/react';
 import { logoIonic } from 'ionicons/icons';
-import './WelcomeScreen.css';
+import './WelcomePage.css';
 import { Link } from 'react-router-dom';
 
-const WelcomeScreen: React.FC = () => {
+const WelcomePage: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
@@ -37,4 +37,4 @@ const WelcomeScreen: React.FC = () => {
   );
 };
 
-export default WelcomeScreen;
+export default WelcomePage;

@@ -26,7 +26,7 @@ const ItemGrid: React.FC = () => {
 
   useEffect(() => {
     axios.defaults.withCredentials = true;
-    axios.get('https://hm22-code.github.io/emploi-go-back/items.json')
+    axios.get('http://localhost:3000/item/')
       .then(response => {
         setItems(response.data);
         console.log(response.data)

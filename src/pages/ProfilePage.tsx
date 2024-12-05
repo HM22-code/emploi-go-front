@@ -1,6 +1,6 @@
 import { IonContent, IonPage, IonAvatar, IonCard, IonCardContent, IonItem, IonLabel } from '@ionic/react';
 import accountCircle from '../assets/account-circle.svg'
-import './ProfileScreen.css';
+import './ProfilePage.css';
 import FilterCard from '../components/FilterCard';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -13,8 +13,7 @@ type User = {
   filters: []
 }
 
-/* Profile Screen */
-const ProfileScreen: React.FC = () => {
+const ProfilePage: React.FC = () => {
 
   const [user, setUser] = useState<User>(
     {
@@ -28,7 +27,7 @@ const ProfileScreen: React.FC = () => {
 
   useEffect(() => {
     axios.defaults.withCredentials = true;
-    axios.get('https://hm22-code.github.io/emploi-go-back/user.json')
+    axios.get('http://localhost:3000/user/')
       .then(response => {
         setUser(response.data);
       })
@@ -40,7 +39,6 @@ const ProfileScreen: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-
         <IonCard>
           <IonCardContent>
             <IonItem>
@@ -48,21 +46,15 @@ const ProfileScreen: React.FC = () => {
                 <img src={accountCircle} alt="Silhouette of avatar"/>
               </IonAvatar>
               <IonLabel>
-                {user.username}
+                { user.username }
               </IonLabel>
             </IonItem>
           </IonCardContent>
         </IonCard>
-
-        <FilterCard
-          data={
-            user.filters
-          }
-        />
-
+        <FilterCard data={ user.filters } />
       </IonContent>
     </IonPage>
   );
 };
 
-export default ProfileScreen;
+export default ProfilePage;
